@@ -1,0 +1,134 @@
+*{
+    margin: auto;
+    padding: auto;
+    box-sizing: border-box;
+ }
+
+ body{
+    font-family: 'Times New Roman', Times, serif;
+ }
+
+a{
+  text-decoration: none;
+  color:black;
+}
+
+li{
+ list-style: none;
+}
+navbar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 0px;
+    background-color: azure;
+}
+
+.logo{
+    font-size: 50px;
+}
+
+.menu_link a{
+    color: black;
+}
+.menu{
+    display: flex;
+     flex-direction:row;
+     font-size: 15px;
+     gap: 1em;
+}
+
+.menu li  {
+  padding: 4px 10px;
+  
+}
+.menu li a {
+    padding: 4px 10px;
+  }
+.menu li a:hover{
+    
+    background-color: #4c9e9e;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    
+}
+
+.service{
+    position: relative;
+}
+
+.dropdown{
+    position: absolute;
+    border-radius: 10px;
+    background-color: azure;
+    top: 45px;
+    padding: 0px 10px;
+    display: none;
+}
+
+.dropdown li + li {
+    margin-top: 10px;
+   }
+
+
+   .dropdown li {
+
+    width: 8em;
+    text-align: center;
+   }
+
+   .dropdown li a :hover {
+    background-color: #4c9e9e;
+   }
+   .service:hover .dropdown {
+    display: block;
+   }
+
+   
+
+
+
+   input[type=checkbox]{
+    display: none;
+   } 
+
+   .hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;}
+
+    @media (max-width: 768px) {
+        .menu { 
+         display:none;
+         position: absolute;
+         background-color:teal;
+         right: 0;
+         left: 0;
+         text-align: center;
+         padding: 16px 0;
+        }
+        .menu li:hover {
+         display: inline-block;
+         background-color:#4c9e9e;
+         transition: 0.3s ease;
+        }
+        .menu li + li {
+         margin-top: 12px;
+        }
+        input[type=checkbox]:checked ~ .menu{
+         display: block;
+        }
+        .hamburger {
+         display: block;
+        }
+        .dropdown {
+         left: 50%;
+         top: 30px;
+         transform: translateX(35%);
+        }
+        .dropdown li:hover {
+         background-color: #4c9e9e;
+        }
+        }
